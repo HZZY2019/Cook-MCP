@@ -5,7 +5,7 @@ import { McpServer } from "@modelcontextprotocol/sdk/server/mcp.js";
 
 export function registerRecommendMealsTool(server: McpServer, recipes: Recipe[]) {
   server.tool(
-    "mcp_howtocook_recommendMeals",
+    "mcp_cook_recommendMeals",
     "根据用户的忌口、过敏原、人数智能推荐菜谱，创建一周的膳食计划以及大致的购物清单",
     {
       allergies: z.array(z.string()).optional()

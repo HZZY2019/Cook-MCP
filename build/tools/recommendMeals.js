@@ -1,7 +1,7 @@
 import { z } from "zod";
 import { simplifyRecipe, processRecipeIngredients, categorizeIngredients } from "../utils/recipeUtils.js";
 export function registerRecommendMealsTool(server, recipes) {
-    server.tool("mcp_howtocook_recommendMeals", "根据用户的忌口、过敏原、人数智能推荐菜谱，创建一周的膳食计划以及大致的购物清单", {
+    server.tool("mcp_cook_recommendMeals", "根据用户的忌口、过敏原、人数智能推荐菜谱，创建一周的膳食计划以及大致的购物清单", {
         allergies: z.array(z.string()).optional()
             .describe('过敏原列表，如["大蒜", "虾"]'),
         avoidItems: z.array(z.string()).optional()

@@ -5,7 +5,7 @@ import { McpServer } from "@modelcontextprotocol/sdk/server/mcp.js";
 
 export function registerWhatToEatTool(server: McpServer, recipes: Recipe[]) {
   server.tool(
-    "mcp_howtocook_whatToEat",
+    "mcp_cook_whatToEat",
     "不知道吃什么？根据人数直接推荐适合的菜品组合",
     {
       peopleCount: z.number().int().min(1).max(10)

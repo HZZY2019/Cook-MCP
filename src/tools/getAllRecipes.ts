@@ -5,7 +5,7 @@ import { McpServer } from "@modelcontextprotocol/sdk/server/mcp.js";
 
 export function registerGetAllRecipesTool(server: McpServer, recipes: Recipe[]) {
   server.tool(
-    "mcp_howtocook_getAllRecipes",
+    "mcp_cook_getAllRecipes",
     "获取所有菜谱",
     {
       'no_param': z.string().optional()

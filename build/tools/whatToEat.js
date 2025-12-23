@@ -1,7 +1,7 @@
 import { z } from "zod";
 import { simplifyRecipe } from "../utils/recipeUtils.js";
 export function registerWhatToEatTool(server, recipes) {
-    server.tool("mcp_howtocook_whatToEat", "不知道吃什么？根据人数直接推荐适合的菜品组合", {
+    server.tool("mcp_cook_whatToEat", "不知道吃什么？根据人数直接推荐适合的菜品组合", {
         peopleCount: z.number().int().min(1).max(10)
             .describe('用餐人数，1-10之间的整数，会根据人数推荐合适数量的菜品')
     }, async ({ peopleCount }) => {

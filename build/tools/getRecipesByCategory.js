@@ -1,7 +1,7 @@
 import { z } from "zod";
 import { simplifyRecipe } from "../utils/recipeUtils.js";
 export function registerGetRecipesByCategoryTool(server, recipes, categories) {
-    server.tool("mcp_howtocook_getRecipesByCategory", `根据分类查询菜谱，可选分类有: ${categories.join(', ')}`, {
+    server.tool("mcp_cook_getRecipesByCategory", `根据分类查询菜谱，可选分类有: ${categories.join(', ')}`, {
         category: z.enum(categories)
             .describe('菜谱分类名称，如水产、早餐、荤菜、主食等')
     }, async ({ category }) => {

@@ -5,7 +5,7 @@
   "type": "module",
   "main": "build/index.js",
   "bin": {
-    "howtocook-mcp": "./build/index.js"
+    "cook-mcp": "./build/index.js"
   },
   "files": [
     "build",
@@ -29,7 +29,7 @@
     "publish:major": "npm version major && npm publish"
   },
   "keywords": [
-    "howtocook",
+    "cook",
     "mcp",
     "server",
     "recipe",

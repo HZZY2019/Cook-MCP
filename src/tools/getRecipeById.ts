@@ -4,7 +4,7 @@ import { McpServer } from "@modelcontextprotocol/sdk/server/mcp.js";
 
 export function registerGetRecipeByIdTool(server: McpServer, recipes: Recipe[]) {
   server.tool(
-    "mcp_howtocook_getRecipeById",
+    "mcp_cook_getRecipeById",
     "根据菜谱名称或ID查询指定菜谱的完整详情，包括食材、步骤等",
     {
       query: z.string().describe('菜谱名称或ID，支持模糊匹配菜谱名称')

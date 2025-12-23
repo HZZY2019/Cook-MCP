@@ -1,6 +1,6 @@
 import { z } from "zod";
 export function registerGetRecipeByIdTool(server, recipes) {
-    server.tool("mcp_howtocook_getRecipeById", "根据菜谱名称或ID查询指定菜谱的完整详情，包括食材、步骤等", {
+    server.tool("mcp_cook_getRecipeById", "根据菜谱名称或ID查询指定菜谱的完整详情，包括食材、步骤等", {
         query: z.string().describe('菜谱名称或ID，支持模糊匹配菜谱名称')
     }, async ({ query }) => {
         // 首先尝试精确匹配ID

@@ -44,7 +44,7 @@ const sseTransports: Record<string, SSEServerTransport> = {};
 // 创建MCP服务器实例
 function createServerInstance(): McpServer {
   const server = new McpServer({
-    name: 'howtocook-mcp',
+    name: 'cook-mcp',
     version: '0.0.1',
   }, {
     capabilities: {
@@ -147,7 +147,7 @@ async function main() {
         } else if (url === "/info") {
           res.writeHead(200, { "Content-Type": "application/json" });
           res.end(JSON.stringify({
-            name: "HowToCook MCP Server",
+            name: "Cook MCP Server",
             version: "0.1.1",
             transport: TRANSPORT_TYPE,
             endpoints: {
@@ -172,7 +172,7 @@ async function main() {
     });
 
     httpServer.listen(PORT, () => {
-      console.log(`🚀 HowToCook MCP ${TRANSPORT_TYPE.toUpperCase()} 服务器启动成功`);
+      console.log(`🚀 Cook MCP ${TRANSPORT_TYPE.toUpperCase()} 服务器启动成功`);
       if(TRANSPORT_TYPE === "http"){
         console.log(`🔗 MCP 端点: http://localhost:${PORT}/mcp`);
       }else if(TRANSPORT_TYPE === "sse"){
@@ -187,7 +187,7 @@ async function main() {
     const transport = new StdioServerTransport();
     try {
       await server.connect(transport);
-      console.log('HowToCook MCP STDIO 服务器启动成功');
+      console.log('Cook MCP STDIO 服务器启动成功');
     } catch (error) {
       console.error('服务器启动失败:', error);
       process.exit(1);
