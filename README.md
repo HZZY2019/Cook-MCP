@@ -35,6 +35,11 @@
 2.在包含本地 MCP 服务器的文件夹中，运行 `dxt init`。也就是您 MCP 的根目录，此命令将引导您创建`manifest.json`
 
 3.运行`dxt pack`创建 dxt 文件
+直接用 npx 调用（无需重开终端）：此命令将引导您创建`manifest.json`
+npx -y @anthropic-ai/mcpb init
+后续打包：
+npx -y @anthropic-ai/mcpb pack   ---成功
+试 npx 版本最快；若成功，再调整 PATH 以便直接用 mcpb 命令。
 
 现在，任何支持 DXT 的应用都可以运行您的本地 MCP 服务器。例如，使用适用于 macOS 和 Windows 的 Claude 打开该文件即可显示安装对话框
 
@@ -116,7 +121,7 @@ npm start
 
 #### 推荐使用 Cursor 快速体验(两种方式)
 
-1. 使用 npm 包：请先运行 `npm i -g howtocook-mcp` ,否则会出现 `Failed to create client`
+1. 使用 npm 包：请先运行 `npm i -g cook-mcp` ,否则会出现 `Failed to create client`
 
 然后在 Cursor 设置中添加 MCP 服务器配置：
 
@@ -136,9 +141,9 @@ npm start
 ```json
 {
 	"mcpServers": {
-		"howtocook-mcp": {
+		"cook-mcp": {
 			"command": "node",
-			"args": ["youpath\\howtocook-mcp\\build\\index.js"]
+			"args": ["youpath\\cook-mcp\\build\\index.js"]
 		}
 	}
 }
